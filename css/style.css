@@ -1,0 +1,80 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+.button {
+   display: inline-block;
+   background-color: #b20f0ffc;
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 600;
+   padding: 15px 40px;
+   border: 1px solid #b20f0ffc;
+   transition: all .3s ease;
+   outline: none;
+}
+.button:hover {
+   background-color: #d65b5bfc;
+}
+
+.container{
+   max-width: 1210px;
+   padding-left: 15px;
+   padding-right:15px;
+   margin: 0 auto;
+}
+
+body {
+   font-family: "Noto Serif", serif;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.4;
+   color: #1b1b1b;
+
+}
+
+.header {
+   width: 100%;
+   margin-bottom: 90px;
+}
+
+.header__container {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 30px;
+}
+.header__logo {
+   height: 40px;
+   width: 50px;
+   overflow: hidden;
+}
+.header__logo img{
+   width: 100%;
+   object-fit: cover;
+}
+
+.header__body {
+   display: flex;
+   align-items: center;
+   column-gap: 2rem;
+}
+
+
+.menu__list {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   column-gap: 2.5rem;
+   row-gap: 0.625rem;
+   color: rgb(37, 35, 35);
+   font-size: 1rem;
+   font-weight: 500;
+}
+
+
+
+.menu__link:hover {
+   text-decoration: none;
+}
+
