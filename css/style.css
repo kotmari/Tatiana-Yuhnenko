@@ -255,7 +255,9 @@
 }
 
 .home__label {
-   text-align: left;
+   text-align: center;
+   font-style: italic;
+   font-weight: 600;
    font-size: 12px;
 }
 .home__title {
@@ -269,6 +271,7 @@
 } */
 .home__description {
    margin-bottom: 3rem;
+   font-size: 1.5rem;
 
 }
 .home__buttons {
@@ -287,9 +290,26 @@
    margin-bottom: 1rem;
 }
 
+.about__item{
+   position: relative;
+}
+
+.about__item::after{
+   content: 'С Юхненко посты превращаются в деньги!';
+   position: absolute;
+   width: 200px;
+   top: -130px;
+   right: 60px;
+   z-index: 1;
+   color: var(--white-color);
+   font-size: var(--h3-font-size);
+   font-weight: var(--font-bold);
+
+
+}
+
 .about__description {
    margin-bottom: 2rem;
-   font-size: var(--normal-font-size);
 }
 
 .about__description span {
@@ -301,25 +321,52 @@
 .services__content {
 }
 .services__item {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 420px;
    justify-self: center;
    text-align: center;
-   width: 300px;
+   width: 280px;
    border: 2px solid var(--first-color);
    border-radius: 4px;
    padding: .75rem;
 }
 .services__img {
-   height: 200px;
+   height: 250px;
    width: 100%;
-   margin-bottom: 2rem;
+   margin-bottom: 1rem;
+}
+
+.services__img img {
+  width: 100%;
 }
 .services__title {
-   font-size: var(--h2-font-size);
+   font-size: var(--h3-font-size);
    text-transform: uppercase;
    margin-bottom: 1rem;
    text-align: center;
 }
 .services__description {
+   margin-bottom: 1rem;
+   font-size: var(--small-font-size);
+}
+
+.services__price-box{
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   align-items: center;
+}
+
+.services__price{
+   font-size: var(--h3-font-size);
+   font-weight: var(--font-bold);
+}
+
+.btn-price {
+   padding: 8px 30px;
+   border-radius: 4px;
 }
 
 .free {
@@ -328,9 +375,9 @@
 }
 
 .free__content {
+   text-align: center;
 }
-.section__title {
-}
+
 .free__description {
 }
 .free__img {
@@ -339,9 +386,21 @@
 }
 .free__content-service {
 }
-.free__content-list {
-   list-style: disc;
-   gap: .75rem;
+
+.free__title{
+   text-align: center;
+   font-size: var(--h3-font-size);
+   font-weight: var(--font-bold);
+   margin-bottom: 1rem;
+}
+.free__content-list li{
+   list-style: circle;
+   margin-bottom: 1rem;
+}
+
+.free__buttons {
+   justify-self: center;
+   margin-bottom: 3rem;
 }
 .footer {
 
@@ -354,7 +413,7 @@
 
 .footer__social {
 }
-.footer__social-list {
+.footer__social-list{
    display: flex;
    padding: .5rem;
    gap: 1rem;
@@ -376,3 +435,26 @@
 .footer__social-item svg:hover path {
    fill: var(--white-color);
 }
+
+::-webkit-scrollbar{
+   width: 0.8rem;
+   background-color: rgb(237, 242, 242);
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--first-color);
+}
+
+.scrollup{
+   position: fixed;
+   right: 1rem;
+   bottom: 3rem;
+   background-color: var(--first-color);
+   display: inline-flex;
+   padding: 6px;
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   border: 1px solid var(--white-color);
+}
+
