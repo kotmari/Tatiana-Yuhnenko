@@ -213,6 +213,8 @@
    right: 0;
 }
 
+
+
 .blur-header::after {
    content: '';
    position: absolute;
@@ -285,21 +287,21 @@
    display: grid;
 }
 .about__img {
+   position: relative;
    justify-self: center;
    width: 300px;
    margin-bottom: 1rem;
 }
 
 .about__item{
-   position: relative;
 }
 
-.about__item::after{
-   content: 'С Юхненко посты превращаются в деньги!';
+.about__img::after{
+   content: 'с ЮXНЕНКО посты превращаются в деньги!';
    position: absolute;
    width: 200px;
-   top: -130px;
-   right: 60px;
+   bottom: 50px;
+   right: -40px;
    z-index: 1;
    color: var(--white-color);
    font-size: var(--h3-font-size);
@@ -317,6 +319,7 @@
 }
 
 .services {
+   margin-bottom: 3rem;
 }
 .services__content {
 }
@@ -369,6 +372,77 @@
    border-radius: 4px;
 }
 
+.content-plain {
+   background-color: var(--first-color-light);
+}
+
+.content-plain__container {
+   gap: 1.5rem;
+   padding: 1.5rem 0;
+}
+
+.content-plain__title2{
+    color: var(--white-color);
+    letter-spacing: 2px;
+
+}
+.content-plain__sub {
+   text-align: center;
+   color: var(--white-color);
+}
+.content-plain__group {
+   display: grid;
+   row-gap: 1.5rem;
+}
+.content-plain__item {
+   background-color: var(--container-color);
+   border-radius: .25rem;
+}
+.content-plain__header {
+ display: flex;
+ align-items: center;
+ column-gap: .5rem;
+ padding: .75rem .5rem;
+ cursor: pointer;
+
+}
+.content-plain__icon {
+   width: 25px;
+   height: 25px;
+}
+.content-plain__title {
+   font-size: var(--normal-font-size);
+   font-weight: var(--font-regular);
+}
+.content-plain__content {
+   overflow: hidden;
+   height: 0;
+}
+.content-plain__eduition,  
+.content-plain__eduition-mini {
+   font-size: var(--small-font-size);
+   padding: 0 1.25rem 1.25rem 2.5rem;
+}
+
+.content-plain__item,
+.content-plain__header,
+.content-plain__title,
+.content-plain__content,
+.content-plain__icon,
+.content-plain__eduition,  
+.content-plain__eduition-mini {
+   transition: .3s;
+}
+
+.content-plain__item:hover {
+   box-shadow: 0 2px 8px hsla(152, 4%, 15%, .15);
+}
+
+.accordion-open .content-plain__icon {
+   transform: rotate(45deg);
+}
+
+
 .free {
 }
 .free__container {
@@ -381,7 +455,8 @@
 .free__description {
 }
 .free__img {
-   width: 300px;
+   width: 400px;
+   height: 550px;
    justify-self: center;
 }
 .free__content-service {
@@ -448,7 +523,7 @@
 .scrollup{
    position: fixed;
    right: 1rem;
-   bottom: 3rem;
+   bottom: -50%;
    background-color: var(--first-color);
    display: inline-flex;
    padding: 6px;
@@ -456,5 +531,15 @@
    height: 45px;
    border-radius: 50%;
    border: 1px solid var(--white-color);
+   z-index: var(--z-tooltip);
+   transition: bottom .4s, transform .4s;
+}
+
+.scrollup:hover{
+   transform: translateY(-.5rem);
+}
+
+.show-scroll{
+   bottom: 3rem;
 }
 

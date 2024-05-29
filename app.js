@@ -29,4 +29,37 @@ const blurHeader = () => {
                       : header.classList.remove('blur-header')
 }
 
-window.addEventListener('scroll', blurHeader)
+window.addEventListener('scroll', blurHeader);
+
+const scrollUp = () => {
+   const scrollUp = document.getElementById('scroll-up')
+   this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                       : scrollUp.classList.remove('show-scroll')
+}
+
+window.addEventListener('scroll', scrollUp)
+
+
+const accordionItems = document.querySelectorAll('.content-plain__item');
+accordionItems.forEach((item) => {
+   const accordionHeader = item.querySelector('.content-plain__header');
+   accordionHeader.addEventListener('click', () => {
+      const openItem = document.querySelector('.accordion-open')
+      toggleItem(item)
+
+      if(openItem && openItem!= item){
+         toggleItem(openItem)
+      }
+   })
+})
+
+const toggleItem = (item) => {
+   const accordionContent = item.querySelector('.content-plain__content')
+   if(item.classList.contains('accordion-open')){
+      accordionContent.removeAttribute('style')
+      item.classList.remove('accordion-open')
+   }else {
+   accordionContent.style.height = accordionContent.scrollHeight + 'px';
+   item.classList.add('accordion-open')
+   }
+}
