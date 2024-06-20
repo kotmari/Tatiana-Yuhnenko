@@ -84,7 +84,35 @@ function scrollActive() {
    })
 }
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
+
+document.addEventListener('DOMContentLoaded', function() {
+   var dialog = document.getElementById('myDialog');
+   var video = document.getElementById('myVideo');
+
+   if (!dialog.showModal) {
+     dialogPolyfill.registerDialog(dialog);
+   }
+
+   document.getElementById('showDialog').addEventListener('click', function() {
+     dialog.showModal();
+   });
+
+   document.getElementById('closeDialog').addEventListener('click', function() {
+     if (video) {
+       video.pause();
+       video.currentTime = 0;  // Скидає відео до початку
+     }
+     dialog.close();
+   });
+
+   dialog.addEventListener('close', function() {
+     if (video) {
+       video.pause();
+       video.currentTime = 0;  // Скидає відео до початку
+     }
+   });
+ });
 
 
 
