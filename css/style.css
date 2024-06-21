@@ -80,6 +80,7 @@ a {
    text-decoration: none;
 }
 
+
 img {
    display: block;
    max-width: 100%;
@@ -89,9 +90,6 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
    max-width: 58.75rem;
-   /* padding-left: 0.9375rem;
-   padding-right: 0.9375rem;
-   margin: 0 auto; */
    margin-inline: 1.5rem;
 }
 
@@ -120,7 +118,9 @@ img {
    background-color: var(--first-color);
    color: var(--white-color);
    text-transform: uppercase;
-   font-weight: 600;
+   text-align: center;
+   font-family: var(--body-font);
+   font-weight: 400;
    font-size: var(--font-regular);
    padding: 15px 35px;
    border: 1px solid var(--first-color);
@@ -615,16 +615,27 @@ img {
    left: -30px;
 }
 
-.free__buttons {
-   justify-self: center;
-   margin-bottom: 3rem;
-}
-
 .video__box {
-   text-align: center;
-   margin: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-self: center;
+   margin: 20px auto;
+   gap: 1.75rem;
  }
 
+ .img__video{
+   width: 100% ;
+   margin-bottom: 1rem;
+   border-radius: 5px;
+
+ }
+ .video__buttons{
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   gap: 2rem;
+
+ }
 .dialog {
    position: fixed;
    top: 50%;
@@ -634,7 +645,7 @@ img {
    border-radius: 8px;
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
    background-color: white;
-   padding: 20px;
+   padding: 10px;
 
  }
  dialog::backdrop {
@@ -642,13 +653,15 @@ img {
  }
 
  video {
+   width: 80vw;
+   height: 50vh;
    display: block;
-   margin: 1rem auto;
+   margin-bottom: 1rem;
  }
 
 
 .footer{
-   background-color: var(--first-color);
+   border-top: 3px solid var(--first-color);
 
 }
 .footer__container {
@@ -673,7 +686,11 @@ img {
    fill: var(--white-color);
 }
 
-.footer__social-item {}
+.footer__social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .footer__social-item svg path {
    border: 1px solid transparent;
@@ -681,7 +698,7 @@ img {
 }
 
 .footer__social-item svg:hover path {
-   fill: var(--white-color);
+   fill: var(--first-color);
 }
 
 ::-webkit-scrollbar {
@@ -733,6 +750,7 @@ img {
       grid-template-columns: 280px;
       justify-content: center;
    }
+
 }
 
 
@@ -782,6 +800,25 @@ img {
       justify-content: space-around;
    }
 
+   .video__box {
+      flex-direction: inherit;
+   }
+
+   .img__video{
+      width: 50% ;
+     }
+
+    .video__buttons{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      gap: 2rem;
+   
+    }
+
+    video {
+      width: 60vw;
+    }
 
 
 }
