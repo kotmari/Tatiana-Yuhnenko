@@ -90,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
    var dialog = document.getElementById('myDialog');
    var video = document.getElementById('myVideo');
 
-   if (!dialog.showModal) {
-     dialogPolyfill.registerDialog(dialog);
-   }
 
    document.getElementById('showDialog').addEventListener('click', function() {
      dialog.showModal();
