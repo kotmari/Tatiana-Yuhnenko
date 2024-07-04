@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Тетяна Юхненко</title>
    <link rel="shortcut icon" href="img/pero.png" type="image/x-icon">
+   <!-- <link rel="canonical" href="https://www.example.com"> -->
    <link rel="preload" as="image" href="./img/ty_home.webp">
    <link rel="stylesheet" href="css/style.css">
 </head>
@@ -35,14 +36,14 @@
                   <a href="#book" class="nav__link">Книги</a>
                </li>
             </ul>
-            <a href="https://t.me/tatiana_ykhnenko" class="menu__btn button" role="button">
+            <a href="https://t.me/tatiana_ykhnenko" class="menu__btn button" rel="noopener noreferrer" target="_blank">
                Напиши мне!
             </a>
             <div class="nav__close" id="nav-close">
                <img src="img/close-line.svg" alt="Close">
             </div>
          </div>
-         
+
          <div class="nav__actions">
             <div class="nav__toggle" id="nav-toggle">
                <img src="img/menu-line.svg" alt="Menu">
@@ -57,17 +58,33 @@
                <img src="./img/ty_home.webp" alt="Татьяна Юхненко">
             </div>
 
+
+
             <div class="home__data">
                <div class="home__label">С Юхненко посты превращаются в деньги!</div>
                <h1 class="home__title">Татьяна<span> Юхненко</span></h1>
                <p class="home__description">Научу, как рассказать о своих качествах
                   и о своём бизнесе так, чтоб вас хотели, аж слюнки текли</p>
                <div class="home__buttons">
-                  <a class="button" href="https://t.me/uhnenko">Узнать больше</a>
+                  <a class="button" href="https://t.me/uhnenko" rel="noopener noreferrer" target="_blank">Узнать больше</a>
+               </div>
+               <div class="home__social">
+                  <span class="home__social-follow">Я в соцсетях:</span>
+                  <div class="home__social-links">
+                     <a href="https://t.me/tatiana_ykhnenko" class="home__social-link" rel="noopener noreferrer" target="_blank">
+                        <img src="img/telegram.svg" alt="telegram">
+                     </a>
+                     <a href="https://www.facebook.com/profile.php?id=100012098237563" class="home__social-link" rel="noopener noreferrer" target="_blank">
+                        <img src="img/facebook.svg" alt="facebook">
+                     </a>
+                     <a href="https://www.instagram.com/tatiana_uhnenko?igsh=MWtwdDY4aXEwNDViaA==" class="home__social-link" rel="noopener noreferrer" target="_blank">
+                        <img src="img/instagram.svg" alt="instagram">
+                     </a>
+                  </div>
                </div>
             </div>
 
-         </div>
+        </div>
 
 
       </section>
@@ -103,105 +120,130 @@
 
       <section class="services section" id="services">
          <div class="services__container container grid">
-            <h2 class="section__title">От текстового марафона АБЗАЦ до курса Акула пера - 
+            <h2 class="section__title">От текстового марафона АБЗАЦ до курса Акула пера -
                у меня есть для вас знания, которые вы не получите больше нигде</h2>
             <div class="services__content grid">
                <article class="services__item">
                   <img loading="lazy" src="img/abzacq.jpg" alt="Текстовый Марафон" class="services__img">
-                  <h3 class="services__title">Текстовый Марафон</h3>
-                  <p class="services__description">Научитесь продавать снег зимой
-                  </p>
-                  <div class="services__price-box">
-                     <span class="services__price">1500 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Текстовый Марафон</h3>
+                     <p class="services__description">Научитесь продавать снег зимой
+                     </p>
+                     <div class="services__price-box">
+                        <span class="services__price">1500 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
                <article class="services__item">
-                  <div class="services__img">
-                     <img loading="lazy" src="img/snapedit.webp" alt="Курс Акула Пера" class="services__img">
-                  </div>
-                  <h3 class="services__title">Курс Акула Пера</h3>
-                  <p class="services__description">После этого курса, никакие другие вам будут больше не нужны</p>
-                  <div class="services__price-box">
-                     <span class="services__price">2140 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <img loading="lazy" src="img/snapedit.webp" alt="Курс Акула Пера" class="services__img">
+             
+                  <div class="services__item-body">
+                     <h3 class="services__title">Курс Акула Пера</h3>
+                     <p class="services__description">После этого курса, никакие другие вам будут больше не нужны</p>
+                     <div class="services__price-box">
+                        <span class="services__price">2140 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
                <article class="services__item">
                   <img loading="lazy" src="img/snapedit_1.webp" alt="Алогоритмы фейсбук" class="services__img">
-                  <h3 class="services__title">Вебинар "Алогоритмы фейсбук"</h3>
-                  <p class="services__description">Как попасть в ленты других людей</p>
-                  <div class="services__price-box">
-                     <span class="services__price">450 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Вебинар "Алогоритмы фейсбук"</h3>
+                     <p class="services__description">Как попасть в ленты других людей</p>
+                     <div class="services__price-box">
+                        <span class="services__price">450 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
                </article>
                <article class="services__item">
-                  <img loading="lazy" src="img/finans.jpg" alt="" class="services__img">
-                  <h3 class="services__title">Вебинар "Как правильно планировать свой финансовый рост"</h3>
-                  <p class="services__description">Это невероятно нужная информация, благодаря которой выросла я.
-                     Без неё, вы будете топтаться на одном месте</p>
-                  <div class="services__price-box">
-                     <span class="services__price">450 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <img loading="lazy" src="img/finans.jpg" alt="финансовый рост" class="services__img">
+                  <div class="services__item-body">
+                     <h3 class="services__title">Вебинар "Как правильно планировать свой финансовый рост"</h3>
+                     <p class="services__description">Это невероятно нужная информация, благодаря которой выросла я.
+                        Без неё, вы будете топтаться на одном месте</p>
+                     <div class="services__price-box">
+                        <span class="services__price">450 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
                </article>
                <article class="services__item">
                   <img loading="lazy" src="img/pbook_1.jpg" alt="Психологическое влияние букв" class="services__img">
-                  <h3 class="services__title">Вебинар "Психологическое влияние букв"</h3>
-                  <p class="services__description">Каждая буква вызывает определённую психологическую реакцию.
-                     От неё зависит - купят или нет.
-                     После вебинара вы начнёте подбирать нужны слова,
-                     чтобы продавать свои услуги, а не только писать тексты</p>
-                  <div class="services__price-box">
-                     <span class="services__price">450 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Вебинар "Психологическое влияние букв"</h3>
+                     <p class="services__description">Каждая буква вызывает определённую психологическую реакцию.
+                        От неё зависит - купят или нет.
+                        После вебинара вы начнёте подбирать нужны слова,
+                        чтобы продавать свои услуги, а не только писать тексты</p>
+                     <div class="services__price-box">
+                        <span class="services__price">450 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
                <article class="services__item">
                   <img loading="lazy" src="img/supr.jpg" alt="начать с нуля" class="services__img">
-                  <h3 class="services__title">Помогу начать с нуля, если вы вообще не понимаете, что делать в Фейсбуке.</h3>
-                  <p class="services__description">Целый месяц буду помогать с идеями, подсказывать, давать волшебные пинки, 
-                     чтобы вы стали на ноги и уверенно пошли</p>
-                  <div class="services__price-box">
-                     <span class="services__price">6000 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Помогу начать с нуля, если вы вообще не понимаете, что делать в Фейсбуке.
+                     </h3>
+                     <p class="services__description">Целый месяц буду помогать с идеями, подсказывать, давать волшебные
+                        пинки,
+                        чтобы вы стали на ноги и уверенно пошли</p>
+                     <div class="services__price-box">
+                        <span class="services__price">6000 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
                <article class="services__item">
                   <img loading="lazy" src="img/cart-pain.webp" alt="разбор вашей страницы" class="services__img">
-                  <h3 class="services__title">Честный разбор вашей страницы. Вы выбираете уровень "боли".</h3>
-                  <p class="services__description">Где 0 - я вам расскажу, что страница у вас офигенна и вы офигенны. А 10 - вы готовы услышать всю правду, взять на вооружение 
-                     и прописать чёткий план достижения цели.Услуга, однозначно, для смелых. И точно найдёт желающих.</p>
-                  <div class="services__price-box">
-                     <span class="services__price">1000 грн</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Честный разбор вашей страницы. Вы выбираете уровень "боли".</h3>
+                     <p class="services__description">Где 0 - я вам расскажу, что страница у вас офигенна и вы офигенны. А
+                        10 - вы готовы услышать всю правду, взять на вооружение
+                        и прописать чёткий план достижения цели.Услуга, однозначно, для смелых. И точно найдёт желающих.
+                     </p>
+                     <div class="services__price-box">
+                        <span class="services__price">1000 грн</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
                <article class="services__item">
                   <img loading="lazy" src="img/ty-konc.webp" alt="Консультация" class="services__img">
-                  <h3 class="services__title">Консультация</h3>
-                  <p class="services__description">Дам понимание, что делать с вашей проблемой</p>
-                  <div class="services__price-box">
-                     <span class="services__price">1000 &#8372; за час</span>
-                     <div class="services__buttons">
-                        <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                  <div class="services__item-body">
+                     <h3 class="services__title">Консультация</h3>
+                     <p class="services__description">Дам понимание, что делать с вашей проблемой</p>
+                     <div class="services__price-box">
+                        <span class="services__price">1000 &#8372; за час</span>
+                        <div class="services__buttons">
+                           <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
+                        </div>
                      </div>
                   </div>
+
                </article>
             </div>
          </div>
@@ -212,7 +254,7 @@
                Контент - планы для разных бизнесов
             </h2>
             <p class="content-plain__sub"> С ними у вас отпадёт вопрос, о чём писать посты</p>
-           
+
             <div class="content-plain__group">
                <div class="content-plain__item">
                   <header class="content-plain__header">
@@ -223,11 +265,11 @@
                   </header>
                   <div class="content-plain__content">
                      <h4 class="content-plain__subtitle">На три месяца (100 тем) для:</h4>
-                        <ul class="content-plain__eduition">
-                           <li>Психолога </li>
-                           <li>Таролога</li>
-                       </ul>
-                       <span class="content-plain__price">Цена контент - плана - 300 грн.</span>
+                     <ul class="content-plain__eduition">
+                        <li>Психолога </li>
+                        <li>Таролога</li>
+                     </ul>
+                     <span class="content-plain__price">Цена контент - плана - 300 грн.</span>
                   </div>
                </div>
                <div class="content-plain__item">
@@ -255,8 +297,8 @@
                         <li>Диетолога</li>
                         <li>Массажиста</li>
                         <li>Риелтора</li>
-                    </ul>
-                    <span class="content-plain__price">Цена контент - плана - 250 грн.</span>
+                     </ul>
+                     <span class="content-plain__price">Цена контент - плана - 250 грн.</span>
                   </div>
                </div>
                <div class="content-plain__item">
@@ -268,8 +310,8 @@
                   </header>
                   <div class="content-plain__content">
                      <p class="content-plain__eduition">
-                        Как написать текст с максимальной пользой для 
-                        кошелька. 
+                        Как написать текст с максимальной пользой для
+                        кошелька.
                      </p>
                      <span class="content-plain__price">Цена гайда - 250 грн.</span>
                   </div>
@@ -283,7 +325,7 @@
                   </header>
                   <div class="content-plain__content">
                      <p class="content-plain__eduition">
-                        Хейтеры, в прямом смысле, пойдут туда, где им и место. 
+                        Хейтеры, в прямом смысле, пойдут туда, где им и место.
                      </p>
                      <span class="content-plain__price">Цена гайда - 250 грн.</span>
                   </div>
@@ -311,7 +353,7 @@
                   </header>
                   <div class="content-plain__content">
                      <p class="content-plain__eduition">
-                        После неё, ваш текст захочется сохранить, переслать 
+                        После неё, ваш текст захочется сохранить, переслать
                         и распечатать, чтобы повесить на стену.
                      </p>
                      <span class="content-plain__price">Цена 200 грн.</span>
@@ -324,25 +366,27 @@
          <div class="book__container container grid">
             <h2 class="section__title">Учебники по текстам, который принесёт вам продажи</h2>
             <div class="book__content">
-               <img loading="lazy" src="img/e22a26c4-fa73-421f-ac2e-7d06dd98d6cf.jpg" alt="Как писать тексты" class="book__img"> 
-               
+               <img loading="lazy" src="img/e22a26c4-fa73-421f-ac2e-7d06dd98d6cf.jpg" alt="Как писать тексты"
+                  class="book__img">
+
                <div class="book__price-box">
-                  <p class="book__description">"Как писать тексты, которые читают. <br> Обалдеть, но в нём даже есть график публикаций в Фейсбук." *Формат PDF.</p>
-                  
+                  <p class="book__description">"Как писать тексты, которые читают. <br> Обалдеть, но в нём даже есть
+                     график публикаций в Фейсбук." *Формат PDF.</p>
+
                   <div class="book__buttons">
                      <span class="book__price">Цена 230 &#8372;</span>
-                     <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                     <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
                   </div>
                </div>
             </div>
             <div class="book__content">
-               <img loading="lazy" src="img/book_2.jpg" alt="Book" class="book__img"> 
-                <div class="book__price-box">
+               <img loading="lazy" src="img/book_2.jpg" alt="Book" class="book__img">
+               <div class="book__price-box">
                   <p class="book__description">"Как писать тексты,которые продают" <br> *Формат PDF.</p>
-               
+
                   <div class="book__buttons">
-                     <span class="book__price">Цена 230 &#8372;</span>
-                     <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" role="button">купить</a>
+                     <span class="book__price">Цена 400 &#8372;</span>
+                     <a class="button btn-price" href="https://t.me/tatiana_ykhnenko" rel="noopener noreferrer" target="_blank">купить</a>
                   </div>
                </div>
             </div>
@@ -364,17 +408,20 @@
                </ul>
             </div>
             <div class="video__box">
-               <img loading="lazy" class="img__video" src="img/img_video.webp" alt="Image Video">
+               <div class="img__video">
+                  <img loading="lazy" src="img/img_video.webp" alt="Image Video">
+                  <img class="play__btn" id="showDialog_2" src="img/play-btn.svg" alt="Play">
+               </div>
                <div class="video__buttons">
                   <button class="button" id="showDialog">видео</button>
-                  <a class="button" href="https://t.me/uhnenko" role="button">Тексты с тренером</a>
+                  <a class="button" href="https://t.me/uhnenko" rel="noopener noreferrer" target="_blank">Тексты с тренером</a>
                </div>
                <dialog id="myDialog" class="dialog">
-                 <video class="my__video" controls id="myVideo">
-                   <source src="img/document_5370654289213541595.mp4" type="video/mp4">
-                   Ваш браузер не підтримує відео тег.
-                 </video>
-                 <button class="button" id="closeDialog">Закрити</button>
+                  <video class="my__video" controls id="myVideo">
+                     <source src="img/document_5370654289213541595.mp4" type="video/mp4">
+                     Ваш браузер не підтримує відео тег.
+                  </video>
+                  <button class="button" id="closeDialog">Закрити</button>
                </dialog>
             </div>
 
@@ -388,9 +435,12 @@
          </a>
          <div class="footer__social">
             <ul class="footer__social-list">
-              <li class="footer__social-item">
+               <li class="footer__social-item">
                   <a href="https://t.me/uhnenko" class="footer__social-link">
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="27" height="28"><path d="M26.07 3.996a2.974 2.974 0 0 0-.933.223l-.004-.001c-.285.112-1.64.682-3.7 1.546l-7.382 3.11C8.755 11.105 3.548 13.3 3.548 13.3l.062-.023s-.36.118-.735.375a2.03 2.03 0 0 0-.586.567c-.185.268-.333.682-.278 1.108.09.723.558 1.156.894 1.395.34.242.664.355.664.355h.008l4.883 1.645c.22.703 1.49 4.875 1.794 5.836.18.573.355.932.574 1.206.106.14.23.257.38.351a1.12 1.12 0 0 0 .245.106l-.05-.012c.015.005.027.017.038.02.04.012.068.016.119.024.772.234 1.393-.246 1.393-.246l.035-.028 2.883-2.625 4.833 3.708.11.046c1.007.44 2.027.195 2.566-.239.542-.436.753-.995.753-.995l.035-.09 3.734-19.129c.106-.472.133-.914.016-1.344a1.807 1.807 0 0 0-.781-1.046 1.872 1.872 0 0 0-1.067-.27zm-.101 2.05c-.005.063.007.056-.02.177v.011l-3.7 18.93c-.016.027-.043.086-.117.145-.078.061-.14.1-.465-.029l-5.91-4.53-3.57 3.254.75-4.79 9.656-9c.398-.37.265-.448.265-.448.027-.453-.602-.133-.602-.133l-12.176 7.543-.004-.02-5.836-1.965v-.002c-.004 0-.012-.004-.015-.004.003 0 .03-.012.03-.012l.032-.016.03-.011s5.211-2.196 10.508-4.426l7.38-3.11c2.054-.864 3.573-1.497 3.66-1.532.081-.031.042-.031.1-.031z"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="27" height="28">
+                        <path
+                           d="M26.07 3.996a2.974 2.974 0 0 0-.933.223l-.004-.001c-.285.112-1.64.682-3.7 1.546l-7.382 3.11C8.755 11.105 3.548 13.3 3.548 13.3l.062-.023s-.36.118-.735.375a2.03 2.03 0 0 0-.586.567c-.185.268-.333.682-.278 1.108.09.723.558 1.156.894 1.395.34.242.664.355.664.355h.008l4.883 1.645c.22.703 1.49 4.875 1.794 5.836.18.573.355.932.574 1.206.106.14.23.257.38.351a1.12 1.12 0 0 0 .245.106l-.05-.012c.015.005.027.017.038.02.04.012.068.016.119.024.772.234 1.393-.246 1.393-.246l.035-.028 2.883-2.625 4.833 3.708.11.046c1.007.44 2.027.195 2.566-.239.542-.436.753-.995.753-.995l.035-.09 3.734-19.129c.106-.472.133-.914.016-1.344a1.807 1.807 0 0 0-.781-1.046 1.872 1.872 0 0 0-1.067-.27zm-.101 2.05c-.005.063.007.056-.02.177v.011l-3.7 18.93c-.016.027-.043.086-.117.145-.078.061-.14.1-.465-.029l-5.91-4.53-3.57 3.254.75-4.79 9.656-9c.398-.37.265-.448.265-.448.027-.453-.602-.133-.602-.133l-12.176 7.543-.004-.02-5.836-1.965v-.002c-.004 0-.012-.004-.015-.004.003 0 .03-.012.03-.012l.032-.016.03-.011s5.211-2.196 10.508-4.426l7.38-3.11c2.054-.864 3.573-1.497 3.66-1.532.081-.031.042-.031.1-.031z" />
+                     </svg>
                   </a>
                </li>
                <li class="footer__social-item">
@@ -408,19 +458,22 @@
                   </a>
                </li>
                <li class="footer__social-item">
-                  <a href="https://www.instagram.com/tatiana_uhnenko?igsh=MWtwdDY4aXEwNDViaA==" class="footer__social-link">
+                  <a href="https://www.instagram.com/tatiana_uhnenko?igsh=MWtwdDY4aXEwNDViaA==" target="_blank"
+                     class="footer__social-link">
                      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18.5a6 6 0 1 0 0-12 6 6 0 0 0 0 
-                        12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="#0F0F0F"/>
-                        <path d="M18 5.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#0F0F0F"/>
+                        12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="#0F0F0F" />
+                        <path d="M18 5.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" fill="#0F0F0F" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.654 4.776C1 6.06 1 7.74 1 11.1v2.8c0 
                         3.36 0 5.04.654 6.324a6 6 0 0 0 2.622 2.622c1.284.654 2.964.654 6.324.654h2.8c3.36 0 
                         5.04 0 6.324-.654a6 6 0 0 0 2.622-2.622C23 18.94 23 17.26 23 13.9v-2.8c0-3.36 0-5.04-.654-6.324a6 6 0 0 0-2.622-2.622C18.44 1.5 16.76 1.5 13.4 1.5h-2.8c-3.36 0-5.04 0-6.324.654a6 6 0 0 0-2.622 2.622zM13.4 3.5h-2.8c-1.713 0-2.878.002-3.778.075-.877.072-1.325.202-1.638.36a4 4 0 0 0-1.748 1.75c-.16.312-.29.76-.36 1.637C3.001 8.222 3 9.387 3 11.1v2.8c0 1.713.002 2.878.075 3.778.072.877.202 1.325.36 1.638a4 4 0 0 0 1.75 1.748c.312.16.76.29 1.637.36.9.074 2.065.076 3.778.076h2.8c1.713 0 2.878-.002 3.778-.075.877-.072 1.325-.202 1.638-.36a4 4 0 0 0 1.748-1.75c.16-.312.29-.76.36-1.637.074-.9.076-2.065.076-3.778v-2.8c0-1.713-.002-2.878-.075-3.778-.072-.877-.202-1.325-.36-1.638a4 4 0 0 0-1.75-
-                        1.748c-.312-.16-.76-.29-1.637-.36-.9-.074-2.065-.076-3.778-.076z" fill="#0F0F0F"/></svg>
+                        1.748c-.312-.16-.76-.29-1.637-.36-.9-.074-2.065-.076-3.778-.076z" fill="#0F0F0F" />
+                     </svg>
                   </a>
                </li>
             </ul>
          </div>
+         <a class="footer__pk" target="_blank" rel="noopener noreferrer" href="documents/Политика конфиденциальности сайта.pdf">Политика конфиденциальности</a>
       </div>
 
    </footer>

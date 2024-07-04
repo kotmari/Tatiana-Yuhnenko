@@ -95,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
      dialog.showModal();
    });
 
+   document.getElementById('showDialog_2').addEventListener('click', function() {
+      dialog.showModal();
+    });
+
    document.getElementById('closeDialog').addEventListener('click', function() {
      if (video) {
        video.pause();
