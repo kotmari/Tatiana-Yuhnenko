@@ -31,13 +31,39 @@ const blurHeader = () => {
 
 window.addEventListener('scroll', blurHeader);
 
-const scrollUp = () => {
-   const scrollUp = document.getElementById('scroll-up')
-   this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                       : scrollUp.classList.remove('show-scroll')
-}
+// const scrollUp = () => {
+//    const scrollUp = document.getElementById('scroll-up')
+//    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+//                        : scrollUp.classList.remove('show-scroll')
 
-window.addEventListener('scroll', scrollUp)
+//    const scrollUpLInk = document.getElementById('telegram-up')
+// }
+
+// window.addEventListener('scroll', scrollUp)
+
+// const scrollUpLink = () => {
+//    const scrollUpLInk = document.getElementById('telegram-up')
+//    this.scrollY >= 350 ? scrollUpLInk.classList.add('show-scroll-link')
+//                        : scrollUpLInk.classList.remove('show-scroll-link')
+// }
+
+// window.addEventListener('scroll', scrollUpLink)
+
+const handleScroll = () => {
+   const scrollY = window.scrollY;
+   const scrollUp = document.getElementById('scroll-up');
+   const scrollUpLink = document.getElementById('telegram-up');
+
+   if (scrollY >= 350) {
+       scrollUp.classList.add('show-scroll');
+       scrollUpLink.classList.add('show-scroll-link');
+   } else {
+       scrollUp.classList.remove('show-scroll');
+       scrollUpLink.classList.remove('show-scroll-link');
+   }
+};
+
+window.addEventListener('scroll', handleScroll);
 
 
 const accordionItems = document.querySelectorAll('.content-plain__item');
@@ -65,8 +91,7 @@ const toggleItem = (item) => {
 }
 
 
-const sections = document.querySelectorAll('section[id]')
-console.log(sections);
+const sections = document.querySelectorAll('section[id]');
 
 function scrollActive() {
    const scrollY = window.scrollY
@@ -91,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function() {
    var video = document.getElementById('myVideo');
 
 
-   document.getElementById('showDialog').addEventListener('click', function() {
-     dialog.showModal();
-   });
+   // document.getElementById('showDialog').addEventListener('click', function() {
+   //   dialog.showModal();
+   // });
 
    document.getElementById('showDialog_2').addEventListener('click', function() {
       dialog.showModal();
@@ -116,16 +141,81 @@ document.addEventListener('DOMContentLoaded', function() {
  });
 
 
+ document.addEventListener("DOMContentLoaded", function () {
+   let countdown = document.getElementById("countdown");
+   let button = document.getElementById("button");
+   let text = document.querySelector('.text');
+   let counter = parseInt(countdown.innerText);
+   let isCountdownStarted = false;
+
+   window.addEventListener('scroll', function() {
+     const target = document.getElementById("target");
+     const targetPosition = target.getBoundingClientRect().top;
+     const windowHeight = window.innerHeight;
+
+     if (targetPosition < windowHeight && !isCountdownStarted) {
+       isCountdownStarted = true;
+       const intervalId = setInterval(() => {
+         if (counter > 0) {
+           counter--;
+           countdown.innerText = counter;
+         } else {
+           clearInterval(intervalId);
+           button.style.display = "block";
+           countdown.style.display = "none";
+           text.style.display = "none";
+         }
+       }, 1000);
+     }
+   });
+ });
+
+
+ const swiper = new Swiper('.swiper', {
+   loop: true,
+   effect: "coverflow",
+   grabCursor: true,
+   centeredSlides: true,
+   slidesPerView: "auto",
+   spaceBetween: "40",
+   coverflowEffect: {
+      rotate: 10,
+      stretch: 0,
+      depth: 200,
+      modifier: 1,
+      slideShadows: true
+   },
+   autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+   },
+   pagination: {
+     el: '.swiper-pagination',
+   },
+ });
 
 
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+   const elements = document.querySelectorAll('.card');
 
+   const observer = new IntersectionObserver(entries => {
+       entries.forEach(entry => {
+           if (entry.isIntersecting) {
+               entry.target.classList.add('visible');
+           } else {
+               entry.target.classList.remove('visible');
+           }
+       });
+   }, {
+       threshold: 0.2 
+   });
 
-
-
-
-
+   elements.forEach(element => {
+       observer.observe(element);
+   });
+});
 
 
