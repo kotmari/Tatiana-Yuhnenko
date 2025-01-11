@@ -89,7 +89,8 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 58.75rem;
+  max-width: 1200px;
+  padding-inline: 20px;
   margin-inline: 1.5rem;
 }
 
@@ -156,8 +157,7 @@ img {
 
 .nav__logo,
 .nav__close,
-.nav__toggle,
-.nav__actions {
+.nav__toggle {
   display: flex;
   color: var(--title-color);
   cursor: pointer;
@@ -166,10 +166,6 @@ img {
 .logo {
   width: 150px;
   column-gap: 0.25rem;
-  align-items: center;
-}
-
-.nav__actions {
   align-items: center;
 }
 
@@ -200,7 +196,6 @@ img {
 }
 
 .nav__link {
-  /* text-transform: uppercase; */
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
   transition: color 0.4s;
@@ -376,12 +371,24 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .about__description span {
   font-weight: normal;
 }
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.book-item {
+  display: flex;
+  gap: 5px;
+}
+
 
 .services {
   margin-bottom: 3rem;
@@ -395,7 +402,7 @@ img {
   border: 2px solid var(--first-color);
   overflow: hidden;
   width: 100%; /* Default width for small screens */
-  max-width: 300px; /* Maximum width for cards */
+  max-width: 330px; /* Maximum width for cards */
 }
 
 .services__img {
@@ -627,7 +634,7 @@ img {
 .swiper-slide {
   position: relative;
   width: 300px;
-  height: 420px;
+  height: 445px;
   padding-bottom: 50px;
   aspect-ratio: 5/6;
   border-radius: 14px;
@@ -968,7 +975,7 @@ video {
   }
 
   .book__price-box {
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .video__box {
@@ -1008,9 +1015,8 @@ video {
   }
 
   .about__data {
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 1.25rem;
-    align-items: start;
   }
 
   .services__content {
@@ -1101,8 +1107,15 @@ video {
     height: 560px;
   }
 
+  .about__data {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+    align-items: start;
+  }
+
+
   .about__item {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .cards {
